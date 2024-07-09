@@ -1,0 +1,53 @@
+ <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="objects">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="object">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:integer">
+                                            <xs:attribute name="type" type="xs:string"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element type="xs:string" name="name"/>
+                            <xs:element type="xs:string" name="email">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension></xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element type="xs:string" name="avatar">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension></xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element type="xs:string" name="created-at">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension></xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element type="xs:string" name="updated-at">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension></xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
